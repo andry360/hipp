@@ -1,5 +1,4 @@
 <?php
-
 class mysql {
 
 	public function array_loop() {
