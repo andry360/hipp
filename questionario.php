@@ -14,7 +14,7 @@ body {background-image:url('immagini/sfondo.jpg');
 <body>
 
 
-<div>
+<div id="domanda">
 <h3>Domanda!</h3>
 </div> 
 
