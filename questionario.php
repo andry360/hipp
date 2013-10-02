@@ -8,15 +8,23 @@ header('P3P:CP="IDC DSP COR ADM DEVi TAIi PSA PSD IVAi IVDi CONi HIS OUR IND CNT
 ?>
 <style>
 body {background-image:url('immagini/sfondo.jpg');
-	  background-repeat: no-repeat;	}
+	  background-repeat: no-repeat;}
 </style>
 </head>
 <body>
 
-
 <div id="domanda">
-<h3>Domanda!</h3>
+<h3>Domanda!</h2>
 </div> 
+<div id="risposta1">
+<h3>Risposta allegra</h2>
+</div>
+<div id="risposta2">
+<h3>Risposta seria</h2>
+</div>
+<div id="risposta3">
+<h3>Risposta triste</h2>
+</div>
 
 </body>
 </html>
