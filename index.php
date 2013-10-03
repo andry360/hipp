@@ -11,7 +11,7 @@ include 'login_jvscript.php';
 <?php 
 if($signed_request = parsePageSignedRequest()) {
 		if($signed_request->page->liked) {
-			include ('questionario.php');
+			include ('gioca.php');
 		} else {
             include ('preLike.php');
 		}
