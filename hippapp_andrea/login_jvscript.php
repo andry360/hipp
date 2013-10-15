@@ -1,7 +1,7 @@
 <div id="fb-root"></div>
 		<script type="text/javascript">
 			window.fbAsyncInit = function() {
-                FB.init({ appId: '610732638955892',
+                FB.init({ appId: '190130531171231',
                     status: true, 
                     cookie: true,
                     xfbml: true,
@@ -27,11 +27,12 @@
 							console.log('User cancelled login or did not fully authorize.');
 						}
 				}, {scope: 'email'});
+				
 		};
 
         (function() {
         	var e = document.createElement('script'); e.async = true;
-            e.src = document.location.protocol + '//connect.facebook.net/en_US/all.js';
+            e.src = document.location.protocol + '//connect.facebook.net/it_IT/all.js';
             document.getElementById('fb-root').appendChild(e);
         }());
 </script>

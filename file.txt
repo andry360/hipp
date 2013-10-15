@@ -1,9 +1,0 @@
-domanda1|risposta1|rispostb1|rispostc1
-domanda2|risposta2|rispostb2|rispostc2
-domanda3|risposta3|rispostb3|rispostc3
-domanda4|risposta4|rispostb4|rispostc4
-domanda5|risposta5|rispostb5|rispostc5
-domanda6|risposta6|rispostb6|rispostc6
-domanda7|risposta7|rispostb7|rispostc7
-domanda8|risposta8|rispostb8|rispostc8
-domanda9|risposta9|rispostb9|rispostc9

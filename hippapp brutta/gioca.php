@@ -15,7 +15,7 @@ function refresh() {
 header('P3P:CP="IDC DSP COR ADM DEVi TAIi PSA PSD IVAi IVDi CONi HIS OUR IND CNT NOI DEV PSAi NAV STP DEM"');
 ?>
 <style>
-body {background-image:url('immagini/PostLike.jpg');
+body {background-image:url('immagini/sfondo.jpg');
 	  background-repeat: no-repeat;}
 </style>
 </head>

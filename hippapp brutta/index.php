@@ -1,4 +1,3 @@
-<?php session_start(); ?>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Frameset//EN" 
 <html xmlns:fb="https://www.facebook.com/2008/fbml">
 <head>
@@ -9,13 +8,18 @@ include 'login_php.php';
 ?>
 </head>
 <body>
+<script>
+function redirect(){
+	location.href = "index2.php";
+}
+</script>
 <?php
+
 $signed_request = parsePageSignedRequest(); 
 
-if($signed_request->page->liked) { include ('postLike.php');
-			/*?> 
-			//<button type="button" value="Condividi" onclick="inviteFriends()"</button>
-         <?php */} else {
+if($signed_request) {
+			?> <button type="button" onclick="redirect()">Click Me!</button>
+		<?php } else {
             include ('preLike.php');
 		}
 ?>

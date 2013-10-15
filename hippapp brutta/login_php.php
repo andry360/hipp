@@ -21,4 +21,5 @@ include 'facebook.php';
 	'oauth' => true,
 	));
 	$user = $facebook->getUser();
+	
 ?>
