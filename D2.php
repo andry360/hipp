@@ -1,9 +1,8 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Frameset//EN" 
-<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
 <?
 session_start();
 ?>
-
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Frameset//EN" 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
 <html xmlns:fb="https://www.facebook.com/2008/fbml">
 <title>Domanda 2</title>
 <head>
@@ -35,23 +34,17 @@ font-size:32px;
 </style>
 
 <?php
-//header('P3P:CP="IDC DSP COR ADM DEVi TAIi PSA PSD IVAi IVDi CONi HIS OUR IND CNT NOI DEV PSAi NAV STP DEM" Content-type: text/html; charset=utf-8' );
-
 header( 'Content-type: text/html; charset=utf-8' );
 
 if (isset($_SESSION['user'] ))
-{
-
+{ //QUI COSA CI DOBBIAMO METTERE?
 ?>
 <script language="javascript">
 
 function vaiprox()
 {
 document.frm.submit();
-
 }	
-
-
 </script>
 
 </head>
@@ -60,8 +53,7 @@ document.frm.submit();
 <?php
 // PRENDO LA RISPOSTA
 
-
-$con     = mysqli_connect("192.168.30.51","andreatest","andreatest","andreatest");
+$con = mysqli_connect("192.168.30.51","andreatest","andreatest","andreatest");
 // scelgo la seconda domanda 
 $strsql  = "SELECT * FROM domande WHERE categoria = 'Blocco2' ";
 $result  = mysqli_query($con,$strsql);

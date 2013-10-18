@@ -1,9 +1,7 @@
+<? session_start(); ?>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Frameset//EN" 
 <meta http-equiv="Content-type" value="text/html; charset=UTF-8" />
 <link href='http://fonts.googleapis.com/css?family=Rambla:400,700' rel='stylesheet' type='text/css'>
-<?
-session_start();
-?>
 <html xmlns:fb="https://www.facebook.com/2008/fbml">
 <head>
 <?php
@@ -43,9 +41,7 @@ function saveregistrazione()
 document.frm.action = "saveregistrazione.php";
 document.frm.submit();
 
-}	
-
-
+}
 </script>
 
 </head>

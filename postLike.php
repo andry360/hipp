@@ -9,12 +9,12 @@ function vaiGioca(){
 </script>
 <form name="frm" action="D1.php" method="post">
 <input type="hidden" name="present" value="<? echo $presentato; ?>">
-<table width="810" height="800" align="center" cellpadding="0" cellspacing="0" background="PostLike1.jpg" >
+<table width="810" height="800" align="center" cellpadding="0" cellspacing="0" background="immagini/PostLike1.jpg" >
 <tr><td height="632" colspan="2">&nbsp;</td>
 </tr>
 <tr>
 <td width="505" height="60" >&nbsp;</td>
-<td width="303"><img src="btn_Gioca.png" onClick="vaiGioca();" style="cursor:pointer"></td>
+<td width="303"><img src="immagini/btn_Gioca.png" onclick="vaiGioca();" style="cursor:pointer"></td>
 <tr>
 
 <tr><td colspan="2">&nbsp;</td></tr>

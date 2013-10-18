@@ -1,7 +1,7 @@
 <div id="fb-root"></div>
 		<script type="text/javascript">
 			window.fbAsyncInit = function() {
-                FB.init({ appId: '610732638955892',
+                FB.init({ appId: '190130531171231',
                     status: true, 
                     cookie: true,
                     xfbml: true,
@@ -14,7 +14,7 @@
   					var js, fjs = d.getElementsByTagName(s)[0];
   					if (d.getElementById(id)) return;
  					js = d.createElement(s); js.id = id;
-  					js.src = "//connect.facebook.net/it_IT/all.js#xfbml=1&appId=610732638955892";
+  					js.src = "//connect.facebook.net/it_IT/all.js#xfbml=1&appId=190130531171231";
   					fjs.parentNode.insertBefore(js, fjs);
 				}(document, 'script', 'facebook-jssdk'));
 					
@@ -31,14 +31,15 @@
 				function FacebookInviteFriends() {
 					FB.ui({
 						method: 'apprequests',
-						message: 'Your Message diaolog'
+						message: 'Gioca anche tu!'
+						 
 					});
 				}
 		};
 
         (function() {
         	var e = document.createElement('script'); e.async = true;
-            e.src = document.location.protocol + '//connect.facebook.net/en_US/all.js';
+            e.src = document.location.protocol + '//connect.facebook.net/it_IT/all.js';
             document.getElementById('fb-root').appendChild(e);
         }());
 </script>

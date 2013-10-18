@@ -1,7 +1,10 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Frameset//EN" 
 <?
 session_start();
+header('P3P:CP="IDC DSP COR ADM DEVi TAIi PSA PSD IVAi IVDi CONi HIS OUR IND CNT NOI DEV PSAi NAV STP DEM"' );
+header('Content-type: text/html; charset=utf-8');
+include 'login_php.php';
 ?>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Frameset//EN" 
 <html xmlns:fb="https://www.facebook.com/2008/fbml">
 <meta http-equiv="Content-type" value="text/html; charset=UTF-8" />
 <link href='http://fonts.googleapis.com/css?family=Rambla:400,700' rel='stylesheet' type='text/css'>
@@ -29,26 +32,12 @@ font-size:32px;
 -->
 </style>
 
-<?php
-header('P3P:CP="IDC DSP COR ADM DEVi TAIi PSA PSD IVAi IVDi CONi HIS OUR IND CNT NOI DEV PSAi NAV STP DEM"' );
-header('Content-type: text/html; charset=utf-8');
-
-
-include 'login_php.php';
-
-?>
 <script language="javascript">
 
-
 function vaiprox()
-
 {
 document.frm.submit();
-
 }	
-
-
-
 </script>
 
 </head>
@@ -66,7 +55,7 @@ $oggi = date ("Ymd H:i:s");
 $dataoggi =  date ("Ymd");
 $oraoggi  = date ("H:i:s");
 
-$con     = mysqli_connect("192.168.30.51","andreatest","andreatest","andreatest");
+$con = mysqli_connect("192.168.30.51","andreatest","andreatest","andreatest");
 //$strsql  = "SET CHARACTER SET utf8"
 //mysql_query($con, $strsql);
 $strsql  = "SELECT * FROM utenti WHERE user = '" . $user."'"; 
@@ -105,7 +94,7 @@ $descrizione  = $row['descrizione'];
 <input type="hidden" name="descrizione" value="<? echo $descrizione ?>">
 
 
-<table width="760" height="831" align="center" cellpadding="0" cellspacing="0" background="Domande.jpg" class="Stile2" >
+<table width="760" height="831" align="center" cellpadding="0" cellspacing="0" background="immagini/Domande.jpg" class="Stile2" >
 <tr><td height="243" colspan="5" >&nbsp;</td>
 </tr>
 <tr><td align="center" colspan="5"><span class="Stile3"><? echo "1/5"; ?></span></td>
@@ -190,23 +179,19 @@ if ($numris == 3)
  <? echo $corretta;?></td>
 <td>&nbsp;</td>
 </tr>
-<? }
-
-?>
+<? } ?>
 
 <tr><td height="26" colspan="5"  >&nbsp;</td>
 <tr>
 <td height="61">&nbsp;</td>
 <td>&nbsp;</td>
 <td width="253" >
-  <a href="<? echo $aiutino ?>" target="_blank"><img src="btn_Aiutino.png" border="0"></a> 
+  <a href="<? echo $aiutino ?>" target="_blank"><img src="immagini/btn_Aiutino.png" border="0"></a> 
   <br>&nbsp;
-  </td>
+ </td>
 
 <td width="346">
-  
-  <img src="btn_Avanti.png" onClick="vaiprox();" style="cursor:pointer">
-  
+  <img src="immagini/btn_Avanti.png" onClick="vaiprox();" style="cursor:pointer">
 </td>
 
 <td>&nbsp;</td>
@@ -216,10 +201,5 @@ if ($numris == 3)
 </table>
 </form>
 
-
-
-
 </body>
-
-
 </html>

@@ -1,8 +1,8 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Frameset//EN" 
-<meta http-equiv="Content-type" value="text/html; charset=UTF-8" />
 <?
 session_start();
 ?>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Frameset//EN" 
+<meta http-equiv="Content-type" value="text/html; charset=UTF-8" />
 <html xmlns:fb="https://www.facebook.com/2008/fbml">
 <head>
 <?php
@@ -21,7 +21,6 @@ if (isset($_SESSION['user'] ))
 function vaiprox()
 {
 document.frm.submit();
-
 }
 
 </script>
@@ -37,50 +36,49 @@ $dataoggi =  date ("Ymd");
 $oraoggi  = date ("H:i:s");
 $con = mysqli_connect("192.168.30.51","andreatest","andreatest","andreatest");
 
-
-// controllo se oggi ha gi giocato nella tabella giocate
+// controllo se oggi ha già giocato nella tabella giocate
 		
 $strsql  = "SELECT * FROM giocate WHERE user = '" . $user."' and data = '".$dataoggi."'"; 
 $result  = mysqli_query($con,$strsql);
 $row_cnt = $result->num_rows;
 
 if ($row_cnt > 0) { ?>
+	<table width="760" height="831" align="center" cellpadding="0" cellspacing="0" background="immagini/SecondaGiocata.jpg" >
+	<tr>
+    <td height="652" >&nbsp;</td>
+	</tr>
 
-<table width="760" height="831" align="center" cellpadding="0" cellspacing="0" background="SecondaGiocata.jpg" >
-<tr><td height="652" >&nbsp;</td>
-</tr>
-<div id="fb-root"></div>
-
-<tr><td height="65" align="center" ><a href='https://freedatalabs.com/dem/Facebookapp/hipapp/atterraggio.php?presentato=<? echo $user; ?>'><img src="btn_InvitaAmici.png" border="0"  style="cursor:pointer" onClick="FacebookInviteFriends();"></a></td>
-</tr>
-<tr><td  >&nbsp;</td></tr>
-</table>
-
-<?
-  	}
-else
-{ 
-
-$strsql="INSERT INTO giocate (user,data,ora) SELECT '".$user."','".$dataoggi."','".$oraoggi."'";
-mysqli_query($con,$strsql); 
+	<tr>
+	<td height="65" align="center">
+	<a href='https://freedatalabs.com/dem/Facebookapp/hipapp/atterraggio.php?presentato=<? echo $user; ?>'><img src=	"immagini/btn_InvitaAmici.png" border="0"  style="cursor:pointer" onClick="FacebookInviteFriends();"></a>
+	</td>
+	</tr>
+	<tr>
+	<td>&nbsp;</td>
+	</tr>
+	</table>
+<?php }
+else { 
+	$strsql="INSERT INTO giocate (user,data,ora) SELECT '".$user."','".$dataoggi."','".$oraoggi."'";
+	mysqli_query($con,$strsql); 
 ?>
-<table width="760" height="831" align="center" cellpadding="0" cellspacing="0" background="SecondoGiorno.jpg" >
-<tr><td height="652" >&nbsp;</td>
-</tr>
+	<table width="760" height="831" align="center" cellpadding="0" cellspacing="0" background="immagini/SecondoGiorno.jpg">
+	<tr>
+	<td height="652">&nbsp;</td>
+	</tr>
 
-<tr><td height="65" align="center" ><a href='https://freedatalabs.com/dem/Facebookapp/hipapp/atterraggio.php?presentato=<? echo $user; ?>'><img src="btn_InvitaAmici.png" border="0"  style="cursor:pointer" onClick="FacebookInviteFriends();"></a></td>
-</tr>
-<tr><td  >&nbsp;</td></tr>
-</table>
-
-
-<?
+	<tr><td height="65" align="center" ><a href='https://freedatalabs.com/dem/Facebookapp/hipapp/atterraggio.php?presentato=<? echo $user; ?>'>	<img src="immagini/btn_InvitaAmici.png" border="0"  style="cursor:pointer" onClick="FacebookInviteFriends();"></a></td>
+	</tr>
+	<tr>
+    <td>&nbsp;</td>
+    </tr>
+	</table>
+<?php
+	}
 }
-
-}
-else // sessione scaduta
-{  
-header("location: blank.php"); 
+else {
+	// sessione scaduta  
+	header("location: blank.php"); 
 }
 ?>
 </html>

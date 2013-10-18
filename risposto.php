@@ -1,13 +1,9 @@
+<? session_start(); ?>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Frameset//EN" 
 <meta http-equiv="Content-type" value="text/html; charset=UTF-8" />
-<?
-session_start();
-?>
 <html xmlns:fb="https://www.facebook.com/2008/fbml">
 <head>
 <?php
-//header('P3P:CP="IDC DSP COR ADM DEVi TAIi PSA PSD IVAi IVDi CONi HIS OUR IND CNT NOI DEV PSAi NAV STP DEM" Content-type: text/html; charset=utf-8' );
-
 header( 'Content-type: text/html; charset=utf-8' );
 
 if (isset($_SESSION['user'] ))
@@ -16,54 +12,49 @@ if (isset($_SESSION['user'] ))
 ?>
 <script language="javascript">
 
-function vaiprox()
-{
-
+function vaiprox() {
 document.frm.submit();
-
 }	
-
 
 </script>
 
 </head>
 
-
 <?php
 // PRENDO LA RISPOSTA
-if  (isset($_POST['risposta']))  
-{ $risposta = $_POST['risposta']; }
+if  (isset($_POST['risposta']))  {
+	$risposta = $_POST['risposta']; }
 
 else {
-			?>
-			<script language="javascript">
-			history.go(-1)
-			</script>
-			<? exit;
-			}
+	?>
+	<script language="javascript">
+	history.go(-1)
+	</script>
+	<? exit;
+	}
 
-if ($risposta != "corr" )
-{ header("location: sbagliata.php"); 
-exit;
+if ($risposta != "corr" ) { 
+	header("location: sbagliata.php"); 
+	exit;
 } 
 
 $oggi = date ("Ymd H:i:s");
 $user = $_SESSION['user'];
 
-if (isset($_SESSION['nome'] ))
-{ $nome = $_SESSION['nome'] ; } 
-else
-{  $nome = "";} 
+if (isset($_SESSION['nome'] )){ 
+	$nome = $_SESSION['nome'] ; } 
+else {
+	$nome = "";} 
 
-if (isset($_SESSION['cognome'] ))
-{ $cognome = $_SESSION['cognome'] ; } 
-else
-{  $cognome = "";} 
+if (isset($_SESSION['cognome'] )){ 
+	$cognome = $_SESSION['cognome'] ; } 
+else {
+	$cognome = "";} 
 
-if (isset($_SESSION['email'] ))
-{ $email = $_SESSION['email'] ; } 
-else
-{  $email = "";} 
+if (isset($_SESSION['email'] )) { 
+	$email = $_SESSION['email'] ; } 
+else {
+	$email = "";} 
 
 
 
@@ -98,11 +89,7 @@ if ($compilato == 0)
 <input type="hidden" name="email" value="<? echo $email ?>">
 </form>
 </body>
-
-
 <?
-
-
 // exit;
 }
 else // form già compilato
