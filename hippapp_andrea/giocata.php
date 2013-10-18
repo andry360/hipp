@@ -8,10 +8,6 @@ session_start();
 <?php
 header('P3P:CP="IDC DSP COR ADM DEVi TAIi PSA PSD IVAi IVDi CONi HIS OUR IND CNT NOI DEV PSAi NAV STP DEM"' );
 header('Content-type: text/html; charset=utf-8');
-include 'login_jvscript.php';
-include 'login_php.php';
-
-
 if (isset($_SESSION['user'] ))
 {
 
@@ -22,7 +18,8 @@ function vaiprox()
 {
 document.frm.submit();
 
-}
+}	
+
 
 </script>
 
@@ -44,37 +41,14 @@ $strsql  = "SELECT * FROM giocate WHERE user = '" . $user."' and data = '".$data
 $result  = mysqli_query($con,$strsql);
 $row_cnt = $result->num_rows;
 
-if ($row_cnt > 0) { ?>
-
-<table width="760" height="831" align="center" cellpadding="0" cellspacing="0" background="SecondaGiocata.jpg" >
-<tr><td height="652" >&nbsp;</td>
-</tr>
-<div id="fb-root"></div>
-
-<tr><td height="65" align="center" ><a href='https://freedatalabs.com/dem/Facebookapp/hipapp/atterraggio.php?presentato=<? echo $user; ?>'><img src="btn_InvitaAmici.png" border="0"  style="cursor:pointer" onClick="FacebookInviteFriends();"></a></td>
-</tr>
-<tr><td  >&nbsp;</td></tr>
-</table>
-
-<?
+if ($row_cnt > 0) { 
+echo "già giocato";
   	}
 else
 { 
-
 $strsql="INSERT INTO giocate (user,data,ora) SELECT '".$user."','".$dataoggi."','".$oraoggi."'";
 mysqli_query($con,$strsql); 
-?>
-<table width="760" height="831" align="center" cellpadding="0" cellspacing="0" background="SecondoGiorno.jpg" >
-<tr><td height="652" >&nbsp;</td>
-</tr>
-
-<tr><td height="65" align="center" ><a href='https://freedatalabs.com/dem/Facebookapp/hipapp/atterraggio.php?presentato=<? echo $user; ?>'><img src="btn_InvitaAmici.png" border="0"  style="cursor:pointer" onClick="FacebookInviteFriends();"></a></td>
-</tr>
-<tr><td  >&nbsp;</td></tr>
-</table>
-
-
-<?
+echo "giocata registrata";
 }
 
 }
@@ -83,4 +57,5 @@ else // sessione scaduta
 header("location: blank.php"); 
 }
 ?>
+</body>
 </html>

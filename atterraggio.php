@@ -1,8 +1,8 @@
-<?php setcookie("is_presented", $_GET['presentato'], time()+10); ?>
-<?php
+<?php  
+echo $_GET['presentato'];
 if (isset($_GET['presentato'])) {
-	
-	//$id_user=$_GET['presentato'];
-	header("location:https://www.facebook.com/Provafan/app_190130531171231");
+	$value=$_GET['presentato'];
+	setcookie("presented",$value, time()+180); 
+	//header("location:https://www.facebook.com/Provafan/app_610732638955892");
 }
 ?>

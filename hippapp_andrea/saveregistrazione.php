@@ -105,16 +105,11 @@ if ( $nome == "" Or $cognome  == "" Or $email  == "" Or $nascita  == "" Or $via 
 <input type="hidden" name="privacy" value="<? echo $privacy ?>">
 
 
-<table width="760" height="831" align="center" cellpadding="0" cellspacing="0" background="FormIncompleto.jpg" >
-<tr><td height="573" >&nbsp;</td>
-</tr>
-
-<tr><td height="111" align="center" ><img src="btn_Indietro.png" onClick="registra();" style="cursor:pointer"></td>
-</tr>
-<tr><td  >&nbsp;</td></tr>
+<table width="810" height="700" align="center" cellpadding="0" cellspacing="0" background="" >
+<tr><td align="center" >Attenzione! tutti i campi sono obbligatori</td></tr>
+<tr><td align="center" ><input type="button" name="indietro" value="Indietro" onClick="registra();"></td></tr>
 </table>
 </form>
-
 </body>
 <? 
 exit;
@@ -126,7 +121,8 @@ else
 $con     = mysqli_connect("192.168.30.51","andreatest","andreatest","andreatest");
 $strsql  = "UPDATE utenti SET nome = '".$nome."',cognome = '".$cognome."',email = '".$email."',nascita = '".$nascita."',via = '".$via."',citta = '".$citta."',provincia = '".$provincia."',cap = '".$cap."',telefono = '".$telefono."', compilato = 1,data_compilazione_form = '".$oggi."' WHERE user = '" . $user."'"; 
 mysqli_query($con,$strsql); 
- header("location: invita.php"); 
+echo "fatto";
+ header("location: giocata.php"); 
  exit;
 
 }

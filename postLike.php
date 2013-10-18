@@ -2,18 +2,24 @@
 <html xmlns:fb="https://www.facebook.com/2008/fbml"><head>
 <title>Hipp</title>
 </head>
-<script language="javascript">
+<script>
 function vaiGioca(){
-	location.href = "D1.php";
+	document.frm.submit();
 }
 </script>
-
-<table width="810" height="700" align="center" cellpadding="0" cellspacing="0" background="PostLike.jpg" >
-<tr><td>&nbsp;</td></tr>
+<form name="frm" action="D1.php" method="post">
+<input type="hidden" name="present" value="<? echo $presentato; ?>">
+<table width="810" height="800" align="center" cellpadding="0" cellspacing="0" background="PostLike1.jpg" >
+<tr><td height="632" colspan="2">&nbsp;</td>
+</tr>
 <tr>
-<td align="center">
-<input type="button" value="Gioca" onclick="vaiGioca()">
-</td>
+<td width="505" height="60" >&nbsp;</td>
+<td width="303"><img src="btn_Gioca.png" onClick="vaiGioca();" style="cursor:pointer"></td>
+<tr>
+
+<tr><td colspan="2">&nbsp;</td></tr>
 </tr>
 </table>
+</form>
+</body>
 </html>

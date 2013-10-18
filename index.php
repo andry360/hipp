@@ -10,12 +10,15 @@ include 'login_php.php';
 </head>
 <body>
 <?php
-$signed_request = parsePageSignedRequest(); 
+if (isset($_COOKIE["presented"])) {
+	$presentato=$_COOKIE["presented"];}
+else {
+	$presentato="";}
 
-if($signed_request->page->liked) { include ('postLike.php');
-			/*?> 
-			//<button type="button" value="Condividi" onclick="inviteFriends()"</button>
-         <?php */} else {
+$signed_request = parsePageSignedRequest(); 
+if($signed_request->page->liked) { 
+			include ('postLike.php');
+			} else {
             include ('preLike.php');
 		}
 ?>

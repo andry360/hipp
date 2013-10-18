@@ -14,7 +14,7 @@
   					var js, fjs = d.getElementsByTagName(s)[0];
   					if (d.getElementById(id)) return;
  					js = d.createElement(s); js.id = id;
-  					js.src = "//connect.facebook.net/it_IT/all.js#xfbml=1&appId=190130531171231";
+  					js.src = "//connect.facebook.net/it_IT/all.js#xfbml=1&appId=610732638955892";
   					fjs.parentNode.insertBefore(js, fjs);
 				}(document, 'script', 'facebook-jssdk'));
 					
@@ -27,6 +27,13 @@
 							console.log('User cancelled login or did not fully authorize.');
 						}
 				}, {scope: 'email'});
+				
+				function FacebookInviteFriends() {
+					FB.ui({
+						method: 'apprequests',
+						message: 'Your Message diaolog'
+					});
+				}
 		};
 
         (function() {
