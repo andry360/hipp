@@ -45,13 +45,17 @@ document.frm.submit();
 <body>
 
 <?php
+if (isset($_COOKIE["presented"])) {
+	$presentato=$_COOKIE["presented"];}
+else {
+	$presentato="";}
 // definisco le variabili di sessione
 $user_profile = $facebook->api('/me','GET');
 $_SESSION['user']=$user;
 $_SESSION['nome'] = $user_profile['first_name'];
 $_SESSION['cognome'] = $user_profile['last_name'];
 $_SESSION['email'] = $user_profile['email'];
-echo $user;
+//echo $user;
 $oggi = date ("Ymd H:i:s");
 $dataoggi =  date ("Ymd");
 $oraoggi  = date ("H:i:s");
@@ -65,7 +69,7 @@ $row_cnt = $result->num_rows;
 
 // se l'utente non esiste in tabella utenti lo aggiungo DEVO AGGIUNGERE CHI LO HA PRESENTATO
 if ($row_cnt == 0) {
-	$strsql="INSERT INTO utenti (user,nome,cognome,email,data_accesso) SELECT '".$user."','".$_SESSION['nome']."','".$_SESSION['cognome']."','".$_SESSION['email']."','".$oggi."'";
+	$strsql="INSERT INTO utenti (user,nome,cognome,email,data_accesso,presentatoda) SELECT '".$user."','".$_SESSION['nome']."','".$_SESSION['cognome']."','".$_SESSION['email']."','".$oggi."','".$presentato."'";
 	mysqli_query($con,$strsql); }
 
 
@@ -91,7 +95,7 @@ $descrizione  = $row['descrizione'];
 
 //ATTENZIONE ////////////////// VAI A risposto PER TEST. PRODUZIONE D1des.PHP
 ?>
-<form name="frm" id="frm" action="risposto.php" method="post">
+<form name="frm" id="frm" action="D1des.php" method="post">
 <input type="hidden" name="descrizione" value="<? echo $descrizione ?>">
 
 

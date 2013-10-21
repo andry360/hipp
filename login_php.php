@@ -15,8 +15,8 @@ include 'facebook.php';
 	}
 	
 	$facebook = new Facebook(array(
-	'appId'  => '190130531171231',
-	'secret' => 'e36cc40965aac4611635e54956f08a85',
+	'appId'  => '610732638955892',
+	'secret' => '148fd7c1d90389e431bd7420d29b45cc',
 	'cookie' => true,
 	'oauth' => true,
 	));

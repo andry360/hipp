@@ -9,10 +9,7 @@ include 'login_php.php';
 </head>
 <body>
 <?php
-if (isset($_COOKIE["presented"])) {
-	$presentato=$_COOKIE["presented"];}
-else {
-	$presentato="";}
+
 
 $signed_request = parsePageSignedRequest(); 
 if($signed_request->page->liked) { 

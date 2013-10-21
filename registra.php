@@ -36,11 +36,9 @@ font-size:12px;
 
 <script language="javascript">
 
-function saveregistrazione()
-{
+function saveregistrazione() {
 document.frm.action = "saveregistrazione.php";
 document.frm.submit();
-
 }
 </script>
 
@@ -114,7 +112,7 @@ else
 // form di registrazione
 ?>
 <form name="frm" id="frm" action="" method="post">
-<table width="760" height="1000" align="center" cellpadding="0" cellspacing="0" background="Form.jpg" class="Stile2" >
+<table width="760" height="1000" align="center" cellpadding="0" cellspacing="0" background="immagini/Form.jpg" class="Stile2" >
 <tr><td height="472" colspan="5" align="center">&nbsp;</td></tr>
 
 <tr>
@@ -201,7 +199,7 @@ In osservanza di quanto previsto ai sensi e per gli effetti dell'art. 13 D. Lgs 
 </tr>
 <tr>
 <td  align="center" colspan="5">
- <img src="btn_Invia.png" onClick="saveregistrazione();" style="cursor:pointer">
+ <img src="immagini/btn_Invia.png" onClick="saveregistrazione();" style="cursor:pointer">
 </td>
 </tr>
 

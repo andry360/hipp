@@ -85,7 +85,7 @@ $descrizione  = $row['descrizione'];
 ?>
 <form name="frm" id="frm" action="risposto.php" method="post">
 <input type="hidden" name="descrizione" value="<? echo $descrizione ?>">
-<table width="760" height="831" align="center" cellpadding="0" cellspacing="0" background="Domande.jpg" class="Stile2" >
+<table width="760" height="831" align="center" cellpadding="0" cellspacing="0" background="immagini/Domande.jpg" class="Stile2" >
 <tr><td height="243" colspan="5" >&nbsp;</td>
 </tr>
 <tr><td align="center" colspan="5"><span class="Stile3"><? echo "5/5";?></span></td>
@@ -179,13 +179,13 @@ if ($numris == 3)
 <td height="61">&nbsp;</td>
 <td>&nbsp;</td>
 <td width="253" >
-  <a href="<? echo $aiutino ?>" target="_blank"><img src="btn_Aiutino.png" border="0"></a> 
+  <a href="<? echo $aiutino ?>" target="_blank"><img src="immagini/btn_Aiutino.png" border="0"></a> 
   <br>&nbsp;
   </td>
 
 <td width="346">
   
-  <img src="btn_Avanti.png" onClick="vaiprox();" style="cursor:pointer">
+  <img src="immagini/btn_Avanti.png" onClick="vaiprox();" style="cursor:pointer">
   
 </td>
 

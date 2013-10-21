@@ -1,7 +1,7 @@
 <div id="fb-root"></div>
 		<script type="text/javascript">
 			window.fbAsyncInit = function() {
-                FB.init({ appId: '190130531171231',
+                FB.init({ appId: '610732638955892',
                     status: true, 
                     cookie: true,
                     xfbml: true,
@@ -14,7 +14,7 @@
   					var js, fjs = d.getElementsByTagName(s)[0];
   					if (d.getElementById(id)) return;
  					js = d.createElement(s); js.id = id;
-  					js.src = "//connect.facebook.net/it_IT/all.js#xfbml=1&appId=190130531171231";
+  					js.src = "//connect.facebook.net/it_IT/all.js#xfbml=1&appId=610732638955892";
   					fjs.parentNode.insertBefore(js, fjs);
 				}(document, 'script', 'facebook-jssdk'));
 					
@@ -26,16 +26,9 @@
 						} else {
 							console.log('User cancelled login or did not fully authorize.');
 						}
-				}, {scope: 'email'});
-				
-				
+				}, {scope: 'email'});				
 		};
 
-		function FacebookInviteFriends() {
-				</script>
-                <fb:send href="http://freedatalabs.com/dem/Facebookapp/hippapp_andrea/atterraggio.php?presentato=<? echo $user; ?>" width="10" height="10" colorscheme="light"></fb:send>
-                <script>
-				}
         (function() {
         	var e = document.createElement('script'); e.async = true;
             e.src = document.location.protocol + '//connect.facebook.net/it_IT/all.js';

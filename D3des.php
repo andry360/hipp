@@ -65,7 +65,7 @@ $descrizione = $_POST['descrizione'];
 
 ?>
 <form name="frm" id="frm" action="D4.php" method="post">
-<table width="760" height="831" align="center" cellpadding="0" cellspacing="0" background="Domande.jpg" >
+<table width="760" height="831" align="center" cellpadding="0" cellspacing="0" background="immagini/Domande.jpg" >
 <tr>
 <td width="115" height="326" >&nbsp;</td>
 <td width="531">&nbsp;</td>
@@ -80,7 +80,7 @@ $descrizione = $_POST['descrizione'];
 <tr>
 <td height="66" >&nbsp;</td>
 <td align="center">
-  <img src="btn_Continua.png" onClick="vaiprox();" style="cursor:pointer">  
+  <img src="immagini/btn_Continua.png" onClick="vaiprox();" style="cursor:pointer">  
 </td>
 <td >&nbsp;</td>
 </tr>

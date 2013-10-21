@@ -1,7 +1,7 @@
 <? session_start(); ?>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Frameset//EN" 
 <meta http-equiv="Content-type" value="text/html; charset=UTF-8" />
-<html xmlns:fb="https://www.facebook.com/2008/fbml">
+<html xmlns:fb="http://ogp.me/ns/fb#">
 <head>
 <?php
 header('P3P:CP="IDC DSP COR ADM DEVi TAIi PSA PSD IVAi IVDi CONi HIS OUR IND CNT NOI DEV PSAi NAV STP DEM"' );
@@ -24,6 +24,7 @@ document.frm.submit();
 
 </head>
 <body>
+<div id="fb-root"></div>
 
 <?php
 
@@ -42,7 +43,7 @@ mysqli_query($con,$strsql);
 </tr>
 <tr>
 
-<td height="65" align="center" ><fb:send href="http://freedatalabs.com/dem/Facebookapp/hippapp_andrea/atterraggio.php?presentato=<? echo $user; ?>" width="10" height="10" colorscheme="light"></fb:send></td>
+<td height="65" align="center" ><fb:send href="http://freedatalabs.com/dem/Facebookapp/hippapp_andrea/primapagina.php?presentato=<? echo $user; ?>" width="10" height="10" colorscheme="light"></fb:send></td>
 </tr>
 <tr><td>&nbsp;</td></tr>
 </table>

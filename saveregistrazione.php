@@ -105,11 +105,11 @@ if ( $nome == "" Or $cognome  == "" Or $email  == "" Or $nascita  == "" Or $via 
 <input type="hidden" name="privacy" value="<? echo $privacy ?>">
 
 
-<table width="760" height="831" align="center" cellpadding="0" cellspacing="0" background="FormIncompleto.jpg" >
+<table width="760" height="831" align="center" cellpadding="0" cellspacing="0" background="immagini/FormIncompleto.jpg" >
 <tr><td height="573" >&nbsp;</td>
 </tr>
 
-<tr><td height="111" align="center" ><img src="btn_Indietro.png" onClick="registra();" style="cursor:pointer"></td>
+<tr><td height="111" align="center" ><img src="immagini/btn_Indietro.png" onClick="registra();" style="cursor:pointer"></td>
 </tr>
 <tr><td  >&nbsp;</td></tr>
 </table>
