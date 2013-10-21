@@ -1,6 +1,7 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Frameset//EN" 
-<html xmlns:fb="https://www.facebook.com/2008/fbml"><head>
-<title>Hipp</title>
+<html xmlns:fb="https://www.facebook.com/2008/fbml">
+<head>
+<title>PostLike</title>
 </head>
 <script>
 function vaiGioca(){

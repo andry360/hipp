@@ -1,8 +1,6 @@
+<? session_start(); ?>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Frameset//EN" 
 <meta http-equiv="Content-type" value="text/html; charset=UTF-8" />
-<?
-session_start();
-?>
 <html xmlns:fb="https://www.facebook.com/2008/fbml">
 <head>
 <?php
@@ -12,20 +10,15 @@ header('Content-type: text/html; charset=utf-8');
 include 'login_jvscript.php';
 include 'login_php.php';
 
-
-
 if (isset($_SESSION['user'] ))
 {
 
 ?>
 <script language="javascript">
 
-function vaiprox()
-{
+function vaiprox() {
 document.frm.submit();
-
 }
-
 
 </script>
 
@@ -44,15 +37,15 @@ $strsql="INSERT INTO giocate (user,data,ora) SELECT '".$user."','".$dataoggi."',
 mysqli_query($con,$strsql); 
 ?>
 
-<table width="760" height="831" align="center" cellpadding="0" cellspacing="0" background="Invita.jpg" >
+<table width="760" height="831" align="center" cellpadding="0" cellspacing="0" background="immagini/Invita.jpg" >
 <tr><td height="652" >&nbsp;</td>
 </tr>
-<div id="fb-root"></div>
-<tr><td height="65" align="center" ><a href='https://freedatalabs.com/dem/Facebookapp/hipapp/atterraggio.php?presentato=<? echo $user; ?>'><img src="btn_InvitaAmici.png" border="0"  style="cursor:pointer" onClick="FacebookInviteFriends();"></a></td>
-</tr>
-<tr><td  >&nbsp;</td></tr>
-</table>
+<tr>
 
+<td height="65" align="center" ><fb:send href="http://freedatalabs.com/dem/Facebookapp/hippapp_andrea/atterraggio.php?presentato=<? echo $user; ?>" width="10" height="10" colorscheme="light"></fb:send></td>
+</tr>
+<tr><td>&nbsp;</td></tr>
+</table>
 
 
 <?
@@ -62,8 +55,5 @@ else // sessione scaduta
 header("location: blank.php"); 
 }
 ?>
-
-</a>
-
 
 </html>

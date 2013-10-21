@@ -23,15 +23,13 @@ document.frm.submit();
 <?php
 // PRENDO LA RISPOSTA
 if  (isset($_POST['risposta']))  {
-	$risposta = $_POST['risposta']; }
+	$risposta = $_POST['risposta']; 
+}
 
+/* DA MODIFICARE PER TORNARE INDIETRO
 else {
-	?>
-	<script language="javascript">
-	history.go(-1)
-	</script>
-	<? exit;
-	}
+	header("location: D1.php"); 
+	}*/
 
 if ($risposta != "corr" ) { 
 	header("location: sbagliata.php"); 

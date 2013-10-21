@@ -3,6 +3,7 @@ session_start();
 header('P3P:CP="IDC DSP COR ADM DEVi TAIi PSA PSD IVAi IVDi CONi HIS OUR IND CNT NOI DEV PSAi NAV STP DEM"' );
 header('Content-type: text/html; charset=utf-8');
 include 'login_php.php';
+include 'login_jvscript.php';
 ?>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Frameset//EN" 
 <html xmlns:fb="https://www.facebook.com/2008/fbml">
@@ -50,7 +51,7 @@ $_SESSION['user']=$user;
 $_SESSION['nome'] = $user_profile['first_name'];
 $_SESSION['cognome'] = $user_profile['last_name'];
 $_SESSION['email'] = $user_profile['email'];
-//echo $user;
+echo $user;
 $oggi = date ("Ymd H:i:s");
 $dataoggi =  date ("Ymd");
 $oraoggi  = date ("H:i:s");

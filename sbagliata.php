@@ -1,8 +1,9 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Frameset//EN" 
-<html xmlns:fb="https://www.facebook.com/2008/fbml"><head>
-<title></title>
+<html xmlns:fb="https://www.facebook.com/2008/fbml">
+<head>
+<title>Risposta sbagliata</title>
 </head>
-
+<body>
 <table width="760" height="831" align="center" cellpadding="0" cellspacing="0" background="immagini/RispErrata.jpg"  >
 <tr><td height="592">&nbsp;</td>
 </tr>
@@ -12,5 +13,5 @@
 </tr>
 <tr><td>&nbsp;</td></tr>
 </table>
-
+</body>
 </html>

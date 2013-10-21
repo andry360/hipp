@@ -1,6 +1,4 @@
-<?
-session_start();
-?>
+<? session_start(); ?>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Frameset//EN" 
 <meta http-equiv="Content-type" value="text/html; charset=UTF-8" />
 <html xmlns:fb="https://www.facebook.com/2008/fbml">
@@ -18,8 +16,7 @@ if (isset($_SESSION['user'] ))
 ?>
 <script language="javascript">
 
-function vaiprox()
-{
+function vaiprox() {
 document.frm.submit();
 }
 
@@ -47,10 +44,9 @@ if ($row_cnt > 0) { ?>
 	<tr>
     <td height="652" >&nbsp;</td>
 	</tr>
-
 	<tr>
 	<td height="65" align="center">
-	<a href='https://freedatalabs.com/dem/Facebookapp/hipapp/atterraggio.php?presentato=<? echo $user; ?>'><img src=	"immagini/btn_InvitaAmici.png" border="0"  style="cursor:pointer" onClick="FacebookInviteFriends();"></a>
+    <fb:send href="http://freedatalabs.com/dem/Facebookapp/hippapp_andrea/atterraggio.php?presentato=<? echo $user; ?>" width="10" height="10" colorscheme="light"></fb:send>
 	</td>
 	</tr>
 	<tr>
@@ -66,8 +62,12 @@ else {
 	<tr>
 	<td height="652">&nbsp;</td>
 	</tr>
-
-	<tr><td height="65" align="center" ><a href='https://freedatalabs.com/dem/Facebookapp/hipapp/atterraggio.php?presentato=<? echo $user; ?>'>	<img src="immagini/btn_InvitaAmici.png" border="0"  style="cursor:pointer" onClick="FacebookInviteFriends();"></a></td>
+	<tr>
+    <td height="65" align="center">
+    <div id="fb-root"></div>
+<script src="http://connect.facebook.net/en_US/all.js#xfbml=1"></script>
+    <fb:send href="http://freedatalabs.com/dem/Facebookapp/hippapp_andrea/atterraggio.php?presentato=<? echo $user; ?>" width="10" height="10" colorscheme="light"></fb:send>
+    </td>
 	</tr>
 	<tr>
     <td>&nbsp;</td>

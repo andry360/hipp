@@ -28,15 +28,14 @@
 						}
 				}, {scope: 'email'});
 				
-				function FacebookInviteFriends() {
-					FB.ui({
-						method: 'apprequests',
-						message: 'Gioca anche tu!'
-						 
-					});
-				}
+				
 		};
 
+		function FacebookInviteFriends() {
+				</script>
+                <fb:send href="http://freedatalabs.com/dem/Facebookapp/hippapp_andrea/atterraggio.php?presentato=<? echo $user; ?>" width="10" height="10" colorscheme="light"></fb:send>
+                <script>
+				}
         (function() {
         	var e = document.createElement('script'); e.async = true;
             e.src = document.location.protocol + '//connect.facebook.net/it_IT/all.js';
